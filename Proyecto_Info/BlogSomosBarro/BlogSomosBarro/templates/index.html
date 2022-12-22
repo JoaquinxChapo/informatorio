@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block contenido %}
+   <main>
+     <!-- ABOUT -->
+
+     <section id="about" class="light">
+      <header class="title">
+        <h2>Sobre <span>Nosotros</span></h2>
+        <p>{{Noticias.titulo}}
+        </p>
+
+
+          <h2>Nuestros trabajos</h2> 
+      </header>
+      <body>
+        <main>
+            <div class="container__card"> <!--este es el row-->
+              
+                <div class="card__father">
+                    <div class="card">
+                        <div class="card__front" style="background-image: url('{%static 'images/barro.png'%}');">
+                            <div class="bg"></div>
+                            <div class="body__card_front">
+                              <h1>Taller en cerámica</h1>
+                            </div>
+                        </div>
+                        <div class="card__back">
+                            <div class="body__card_back">
+                                <p>Ofrece liberación puedes crear y expresarte de alguna forma.Aumenta tu perspectiva optimista:la cerámica
+                                  permite mejoras en la espontaneidad, proporciona una salida para el 
+                                  duelo y lo ayuda a auto identificarse y expresarse.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    </body>
+    
+      <div class="container">
+        <div class="row table-row">
+          <div class="col-sm-6 hidden-xs">
+            <div class="section-content">
+              <div class="big-image" style="background-image:url('{%static 'images/h.png'%}')"></div>
+              <div class="imagenes">
+                <img src="static/images/h.png" height="330" width="500" >
+                <img src="static/images/s.png" height="330" width="500" >
+                <img src="static/images/p.png" height="330" width="500" >
+              </div>
+
+
+            </div>
+          </div>
+
+
+
+            <div class="section-content">
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Música y exposición de arte en Macedonio bar </h4>
+                  <p>Este sábado visitamos el bar Macedonio para compartir el trabajo que venimos desarrollando desde la Fundación Somos Barro, en donde expusimos algunos trabajos en cerámica de los niños y niñas que participan de los encuentros, realizamos una demostración de torno. Además, Barro Musical, la banda de la Fundación, nos deleitó con algunos temas y @paula nos acompaño con una lectura reflexiva. Esta propuesta sitentiza la labor que llevamos adelante y las perspectivas con las que trabajamos. 
+                    Agradecemos a la iniciativa de las Alumnas de la Cátedra Taller de Práctica II: Gestión de Programas y Proyectos Culturales. FADYCC-UNNE. quienes nos tuvieron presente para llevar adelante un proyecto de estudio, al Bar Macedonio que nos recibieron y atendieron de la mejor manera y a lxs amigxs que acompañaron. </p>
+                </div>
+              </div>
+              
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Visitamos al Jardín “Héroes Latinoamericanos”
+                  </h4>
+                  <p>El día de ayer, visitamos la EPGS N°1 "Nivel Inicial”, para conocer el Jardín "Héroes Latinoamericanos" del Barrio Mate Cocido y llevar a cabo una actividad de cerámica con los niños y niñas de dicha institución, a quienes también les compartimos los orígenes y desarrollo de la cerámica en latinoamerica revalorizado lo nuestro, y lo ancestral. 
+                    Agradecemos a la Direc. Lorena Ramírez quien nos abrió las puertas de su jardín, y a las seños por compartimos una mañana muy agradable.
+                    </p>
+                </div>
+              </div>
+
+              <div class="about-content left animated" data-animate="fadeInLeft">
+
+                <div class="about-detail">
+                  <h4>Se llevó a cabo el Taller de Maquillaje artístico 
+                  </h4>
+                  <p>El día de ayer brindamos un taller de maquillaje personal, destinado prioritamente a las mamis que acompañan a sus niños y niñas a los talleres artísticos. 
+                    El taller fue completamente gratuito es por eso que agradecemos profundamente a estética Estética Profesional quien nos hizo una donación de insumos para llevarlo acabo. A Paula Belizan quien organiza, gestiono y dicto el taller de manera voluntaria como así tambien Fabiana Benitez que acompaño en coordinación del mismo. 
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- /.row table-row -->
+      </div> <!-- /.container -->
+    </section>
+	
+	
+	    <!-- PORTFOLIO -->
+
+    <section id="portfolio" class="light">
+      <header class="title">
+        <h2>¿Qué hacemos?</h2>
+        <p>Buscamos garantizar igualdad de oportunidades y la posibilidad de que todos y todas tengan acceso gratuito a una educación artística, actividades recreativas y un espacio de contención y prevención, constituyéndose el barrio como lugar de referencia para niños, niñas y adolescentes.</p>
+      </header>
+
+      <div class="container-fluid">
+        <div class="row">
+          <ul id="filters" class="list-inline">
+            <li data-filter="all" class="filter">Todos</li>
+            <li data-filter=".branding" class="filter">Cocineros</li> 
+            <li data-filter=".graphic" class="filter">Música</li> 
+            <li data-filter=".printing" class="filter">Ceramica</li> 
+            <li data-filter=".video" class="filter">Pintura</li> 
+          </ul>
+        </div>
+
+        <div class="row">
+          <div class="container-portfolio">
+            <!-- PORTFOLIO OBJECT -->
+            <script type="text/javascript">
+            var portfolio = [
+                    {
+                      category : "branding",
+                      image : "static/images/p-1.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "graphic",
+                      image : "static/images/p-2.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "graphic",
+                      image : "static/images/p-3.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "video",
+                      image : "static/images/p-4.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {  
+                      category : "branding",
+                      image : "static/images/p-5.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "static/images/p-6.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "static/images/p-7.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    },
+                    {
+                      category : "printing",
+                      image : "static/images/p-8.png",
+                      title : "",
+                      link : "#none",
+                      text : ""
+                    }
+                ];
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- TEAM -->
+
+    <section id="team" class="light">
+      <header class="title">
+        <h2>Creative <span>Team</span></h2>
+        <p></p>
+      </header>
+      
+      <div class="container">
+        <div class="row">
+
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="static/images/team-1.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Germán Cenzi</h3>
+              <h5>Presidente</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.instagram.com/germancenzi/" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/profile.php?id=100009494608222" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="static/images/team-2.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Narela Sanchez</h3>
+              <h5>Secretaría</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.facebook.com/narela.sanchez.71/photos" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="static/images/team-3.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Gabriel Alsina</h3>
+              <h5>Músico</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.instagram.com/g_alsina/" class="fa fa-linkedin"></a></li>
+                  <li><a href="https://www.facebook.com/sagalsina" class="fa fa-facebook"></a></li>
+                </ul> 
+              </div>                
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-6 text-center">
+            <div class="wrap animated" data-animate="fadeInDown"> 
+              <div class="img-team">
+                <img src="static/images/team-4.png" alt="" class="img-circle">
+              </div>
+
+              <h3>Betty Ivanoff</h3>
+              <h5>Tesorera</h5>
+
+              <p></p>
+
+              <div class="team-social">
+                <ul class="list-inline social-list">
+                  <li><a href="https://www.facebook.com/betty.ivanoff.3" class="fa fa-facebook"></a></li>
+
+                </ul> 
+              </div>                
+            </div>
+          </div>
+
+          
+        </div>
+      </div> <!-- /.container -->
+    </section>
+{% endblock %}

@@ -1,0 +1,16 @@
+asgiref==3.5.2
+cffi==1.15.1
+cryptography==38.0.4
+distlib==0.3.6
+Django==4.1.4
+filelock==3.8.2
+mysql==0.0.3
+mysql-connector-python==8.0.31
+mysqlclient==2.1.1
+Pillow==9.3.0
+platformdirs==2.6.0
+pycparser==2.21
+PyMySQL==1.0.2
+sqlparse==0.4.3
+tzdata==2022.7
+virtualenv==20.17.1

@@ -49,7 +49,7 @@ input[type="password"]{
     cursor: pointer;
 }
 .button:hover{
-    background: cadetblue;
+    background: #693b01;
 }
 p{
     text-align: center;
@@ -60,7 +60,7 @@ p{
     font-weight: 600;
 }
 .link:hover{
-     color: cadetblue;
+     color: #693b01;
 }
 @media(min-width:768px)
 {

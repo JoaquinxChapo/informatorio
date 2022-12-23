@@ -26,7 +26,7 @@ class Noticias(models.Model):
     autor=models.ForeignKey('auth.User', on_delete=models.CASCADE)    
     titulo=models.CharField(max_length=255)
     contenido= models.TextField()
-    img=models.ImageField(null=True, blank=True, upload_to='img/noticias')
+    img=models.ImageField(null=True, blank=True, upload_to='img/images')
     creado=models.DateTimeField(default=timezone.now)
     modificado = models.DateTimeField(auto_now=True)
     publicado=models.DateTimeField(blank=True, null=True)
@@ -41,11 +41,36 @@ class Noticias(models.Model):
 
 
 """Clase para la creacion de las tarjetas"""
-class Somos(models.Model):
+class Tarjetas(models.Model):
     titulo=models.CharField(max_length=255)
     contenido= models.TextField()
-    img=models.ImageField(null=True, blank=True, upload_to='img/somos')
-    categorias= models.ManyToManyField('Categorias',related_name='somos')
-    def PublicarSomos(self):
+    img=models.ImageField(null=True, blank=True, upload_to='img/images')
+    categorias= models.ManyToManyField('Categorias',related_name='tarjetas')
+    creado=models.DateTimeField(default=timezone.now)
+    def Publicartarjetas(self):
         self.publicado=datetime.now()
         self.save()
+
+
+class Trabajos(models.Model):
+    titulo=models.CharField(max_length=255)
+    contenido= models.TextField()
+    img=models.ImageField(null=True, blank=True, upload_to='img/images')
+    categorias= models.ManyToManyField('Categorias',related_name='trabajos')
+    creado=models.DateTimeField(default=timezone.now)
+    def Publicartrabajo(self):
+        self.publicado=datetime.now()
+        self.save()
+
+class InfoIndex(models.Model):
+    contenido=models.TextField(max_length=5000)
+    categorias=models.ManyToManyField('Categorias', related_name='NosotrosIndex')
+    creado=models.ManyToManyField('Categorias', related_name='infoindex')
+    def PublicarNos(self):
+        self.publicado=datetime.now()
+        self.save()
+
+class Team(models.Model):
+    contenido= models.TextField()
+    img=img=models.ImageField(null=True, blank=True, upload_to='img/images')
+    tipo=models.TextField

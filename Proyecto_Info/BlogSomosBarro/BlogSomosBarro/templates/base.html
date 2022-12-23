@@ -10,8 +10,8 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Función Somos Barro</title>
-
+    <title>Fundación Somos Barro</title>
+    <link rel="stylesheet" href="{%static 'css/estilos.css'%}"/>
     <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}"/>
     <link rel="stylesheet" href="{%static 'css/font-awesome.min.css'%}css/font-awesome.min.css"/>
     <link rel="stylesheet" href="{%static 'css/animate.css'%}"/>
@@ -56,17 +56,19 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#header">Fundación Somos Barro </a>
+            <a class="navbar-brand" >Fundación Somos Barro </a>
           </div><!-- /.navbar-header -->
 
 
           <div class="collapse navbar-collapse" id="menu">
             <ul class="nav navbar-nav navbar-right">
               <li><a href="#header">Inicio</a></li>
-              <li><a href="#about">Sobre Nosotros</a></li>              
+              <li><a href="#about">Sobre Nosotros</a></li>
+              <li><a href="#noticias">Noticias</a></li>              
               <li><a href="#portfolio">Fundación</a></li>
-			  <li><a href="#team">Somos</a></li>
+			        <li><a href="#team">Equipo</a></li>
               <li><a href="#contact">Contacto</a></li>
+              <li><a href="#contact">Registrarse</a></li>
             </ul>
           </div> <!-- /.navbar-collapse -->
         </div> <!-- /.container -->
@@ -166,7 +168,7 @@
 
             <section id="contact" class="dark">
             <header class="title">
-                <h2>contác <span>tos</span></h2>
+                <h2>contác <span>tanos</span></h2>
                 <p> Para más información visitas nuestras redes o mándanos un correo electrónico. </p>
             </header>
 
@@ -211,8 +213,21 @@
                 <div class="row">
                 <div class="col-md-12 text-center">
                     <p> Hecho por <i class="fa fa-heart"></i> <a href=""></a></p>
-                    <button class="btn btn-default submit" ><a href= {%url 'login' %}>Login</a></button>
-                    <button class="btn btn-default submit" ><a href= {%url 'registro' %}>registrarse</a></button>
+                    {% if user.is_authenticated %}
+                    <div class="d-flex" style="margin-top: 1%;">
+                      <h5>Hola {{ user.username }}</h5>
+                    </div>
+                    <div class="d-flex" style="margin-left: 2%;">
+                      <a class="btn btn-primary" href="{%url 'apps.blog_auth:logout'%}">Cerrar Sesión</a>
+                    </div>
+                {% else %}
+                  <div class="d-flex">
+                    <button class="btn btn-default submit" ><a href= "{%url 'apps.blog_auth:login'%}">Login</a></button>
+                  </div>
+                  <div class="d-flex" style="margin-left: 2%;">
+                    <button class="btn btn-default submit" ><a href= "{%url 'apps.blog_auth:registro'%}">Registrarse</a></button>
+                  </div>
+                {% endif %}
                 </div>
                 </div>
             </div>
